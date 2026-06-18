@@ -44,11 +44,17 @@ graph LR
 
 ---
 ## Challenges
-### Accessing the Server
+### Accessing the Server (old)
 This was the largest issue that I've had during the project itself. During the beginning of the project, my core objection was to leave port 22 alone such that the server would be privately accessible through a VPN, and only accessible through a VPN.<br>
 The first attempt was to use Tailscale (use hyperlink), an extremely easy to use VPN service where you can access another machine on the same tailnet.<br>
 The second attempt was to use cloudflared (use hyperlink)
 The last attempt, and ultimately the solution, was to just open port 22.
+
+### Accessing the Server
+Getting a secure connection to the server was the most difficult part of this project. When I started, the thing I knew I did not want to do was to open port 22 because of security issues. After having discussed this with my EEP Mentor, Dr. Willam Hawkins III, he told me about a tool called [Tailscale](https://tailscale.com/).<br>
+In short, Tailscale is a mesh VPN built on top of Wireguard tunnels that's dead simple to set up and configure. The key issue with Tailscale though in my case, is the inability to resolve direct connections when the client is using a network with a Symmetrical NAT. DEFINE SYMMETRICAL HERE
+
+
 
 ---
 
