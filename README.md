@@ -1,5 +1,3 @@
-quick test to make sure this ide is connected
-
 # cloud-project
 During the Spring '26 semester, I took an EEP wherein I worked on one major project, and two sub-projects. This is the main project that I worked on.
 This will serve as the writeup for the project, as well as the long version of what my site contains.<br>
