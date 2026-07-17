@@ -1,8 +1,6 @@
 import pullfiles
 import matplotlib.pyplot as plt
 import pandas as pd
-import numpy as np
-
 
 def returnavg(lst):
     return ((pd.concat(lst))[1].mean()) / 1024
@@ -10,10 +8,13 @@ def returnavg(lst):
     # '[x].mean()' --> find the average of column x
 
 
-# def lineofbestfit(dataset):
-#    return np.polyfit(dataset.index, dataset["bandwidth"], 1)
+if __name__ == "__main__":
 
+    Q540VJ = pullfiles.Machine("Q540VJ")
+    T480 = pullfiles.Machine("T480")
+    PB650G1 = pullfiles.Machine("PB650G1")
 
+'''
 def writetest(testlist, graphcolor, staticcolor, devicename):
     finaltest = pd.concat(testlist, ignore_index=True)     # ------------------------------------------ ignore index so that index doesn't reset to 0
     finaltest.columns = ["time", "bandwidth", "col3", "col4", "col5"]
@@ -43,7 +44,7 @@ if __name__ == "__main__":
     fig2, ax2 = plt.subplots(figsize=(14, 8))
     # ax1 is for the write tests
     # ax2 is for the read tests
-    
+
     writetest(pullfiles.Q540VJ_write, "teal", "aqua", "Q540VJ (WiFi 6E)")
     writetest(pullfiles.T480_write, "green", "lime", "T480 (WiFi 5)")
     writetest(pullfiles.PB650G1_write, "purple", "fuchsia", "PB650G1 (WiFi 4)")
@@ -55,7 +56,7 @@ if __name__ == "__main__":
 
     ax1.legend()
     ax2.legend()
-    
+
     ax1.set_xlabel("Index value")
     ax1.set_ylabel("Bandwidth (MiB/s)")
     ax2.set_xlabel("Index value")
@@ -68,3 +69,4 @@ if __name__ == "__main__":
     fig1.savefig("write.png", dpi=300, bbox_inches="tight")
     fig2.savefig("read.png", dpi=300, bbox_inches="tight")
     plt.show()
+    '''
